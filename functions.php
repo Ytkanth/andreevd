@@ -52,9 +52,8 @@ function andreevd_scripts() {
  * Регистрация новых областей меню
  */
 function andreevd_menus() {
-
+// собираем несколько областей меню
 	$locations = array(
-		// собираем несколько областей меню
 		'header'  => __( 'Header menu', 'andreevd' ),
 		'footer'   => __( 'Footer Menu', 'andreevd' ),
 	);
@@ -63,3 +62,6 @@ function andreevd_menus() {
 }
 // хук событие
 add_action( 'init', 'andreevd_menus' );
+
+// добавим класс nav-item ко всем пунктам меню с помощью филтров
+add_filter

@@ -37,8 +37,15 @@
             <i class="fa fa-bars"></i>
           </span>
         </button>
-
         <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+          <?php wp_nav_menu( [
+            'theme_location'  => 'header',
+            'container'       => false,
+            'menu_class'      => 'navbar-nav',
+            'menu_id'         => false,
+            'echo'            => true,
+            'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+          ] );; ?>
           <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link" href="/"> Главная </a>
